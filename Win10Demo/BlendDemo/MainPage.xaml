@@ -1,0 +1,130 @@
+﻿<Page
+    x:Class="BlendDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlendDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="GroupTemplate">
+            <Grid Height="110" Width="480" Margin="10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                    <Image Source="{Binding Property3}" Height="110" Width="110"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                    <TextBlock Text="{Binding Property1}" Style="{StaticResource TitleTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Property2}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup" IsSourceGrouped="True" ItemsPath="Items" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Source="{Binding Property3}" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property1}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="{Binding Property2}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup1" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate1">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property1}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="Subtitle" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup2" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate2">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Source="{Binding Property3}" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="Title" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="Subtitle" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup3" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate3">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property2}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="Subtitle" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup4" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate4">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Source="{Binding Property3}" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property1}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="{Binding Property2}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup5" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate5">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="Title" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="Subtitle" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup6" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+        <DataTemplate x:Key="ItemTemplate6">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Source="{Binding Property3}" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property1}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="{Binding Property2}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup7" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{Binding Source={StaticResource SampleDataSource}}" d:DataContext="{Binding Source={StaticResource SampleDataSource}}">
+        <Pivot ItemsSource="{Binding Source={StaticResource ItemsGroupedByGroup7}}" Title="SampleDataSource">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="1,0,0,6" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Property1}" Margin="3,-7,10,10" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <ListView ItemTemplate="{StaticResource ItemTemplate6}" ItemsSource="{Binding Items}"/>
+                </DataTemplate>
+            </Pivot.ItemTemplate>
+        </Pivot>
+    </Grid>
+</Page>
